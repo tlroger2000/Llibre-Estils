@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 731.65 422.72">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: #f4e637;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-6, .cls-7 {
+        font-family: BankGothicBold, BankGothic;
+        font-size: 104.51px;
+      }
+
+      .cls-1, .cls-3, .cls-5, .cls-8, .cls-9, .cls-10, .cls-6, .cls-7 {
+        isolation: isolate;
+      }
+
+      .cls-5 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 19.76px;
+      }
+
+      .cls-9 {
+        letter-spacing: .12em;
+      }
+
+      .cls-9, .cls-10 {
+        fill: #f5f5f5;
+        font-family: HelveticaNeue-UltraLight, 'Helvetica Neue';
+        font-size: 26.46px;
+        font-weight: 100;
+      }
+
+      .cls-10 {
+        letter-spacing: .1em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-11 {
+        fill: none;
+        stroke: #f4e637;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-7 {
+        letter-spacing: -.07em;
+      }
+    </style>
+  </defs>
+  <g>
+    <g class="cls-8">
+      <text class="cls-10" transform="translate(204.07 338.18) scale(1.03 1)"><tspan x="0" y="0">Food Consulting Se</tspan></text>
+      <text class="cls-9" transform="translate(468.68 338.18) scale(1.03 1)"><tspan x="0" y="0">r</tspan></text>
+      <text class="cls-10" transform="translate(478.95 338.18) scale(1.03 1)"><tspan x="0" y="0">vice</tspan></text>
+    </g>
+    <g class="cls-8">
+      <text class="cls-1" transform="translate(79.22 302.89)"><tspan x="0" y="0">L</tspan></text>
+      <text class="cls-3" transform="translate(148.61 302.89)"><tspan x="0" y="0">A </tspan></text>
+      <text class="cls-1" transform="translate(269.63 302.89)"><tspan x="0" y="0">C</tspan></text>
+      <text class="cls-3" transform="translate(351.35 302.89)"><tspan x="0" y="0">A</tspan></text>
+      <text class="cls-6" transform="translate(431.93 302.89)"><tspan x="0" y="0">R</tspan></text>
+      <text class="cls-7" transform="translate(513.75 302.89)"><tspan x="0" y="0">T</tspan></text>
+      <text class="cls-3" transform="translate(571.86 302.89)"><tspan x="0" y="0">A</tspan></text>
+    </g>
+  </g>
+  <g>
+    <polygon class="cls-4" points="487.81 220.55 361.92 220.55 350.15 208.77 319.97 176.02 380.36 176.02 380.36 176.02 350.15 145.85 319.97 176.02 318.68 177.31 275.31 220.65 243.85 189.18 346.03 87 354.26 87 487.81 220.55"/>
+    <g class="cls-8">
+      <text class="cls-5" transform="translate(367.74 95.76)"><tspan x="0" y="0">©</tspan></text>
+    </g>
+  </g>
+  <text class="cls-2" transform="translate(652.43 170.91) rotate(90)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-2" transform="translate(79.22 170.91) rotate(90) scale(1 -1)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-2" transform="translate(406.11 79.22) rotate(-180) scale(1 -1)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-2" transform="translate(325.53 343.5) scale(1 -1)"><tspan x="0" y="0">A</tspan></text>
+  <rect class="cls-11" x="79.22" y="79.22" width="573.21" height="263.96"/>
+</svg>

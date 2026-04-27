@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 573.21 273.53">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .1em;
+      }
+
+      .cls-2 {
+        letter-spacing: .03em;
+      }
+
+      .cls-3 {
+        font-family: BankGothicBold, BankGothic;
+        font-size: 104.51px;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: #f3e537;
+      }
+
+      .cls-4 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 19.76px;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8 {
+        letter-spacing: .08em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-10 {
+        letter-spacing: .1em;
+      }
+
+      .cls-11 {
+        font-family: Helvetica, Helvetica;
+        font-size: 24px;
+      }
+    </style>
+  </defs>
+  <g>
+    <text class="cls-11" transform="translate(83.57 261.99) scale(1.03 1)"><tspan class="cls-1" x="0" y="0">FOOD CONSU</tspan><tspan class="cls-2" x="186.67" y="0">L</tspan><tspan class="cls-1" x="200.65" y="0">TING SE</tspan><tspan class="cls-8" x="313.46" y="0">R</tspan><tspan class="cls-10" x="332.77" y="0">VICE</tspan></text>
+    <text class="cls-3" transform="translate(0 223.67)"><tspan class="cls-7" x="0" y="0">L</tspan><tspan class="cls-6" x="69.39" y="0">A </tspan><tspan class="cls-7" x="190.41" y="0">C</tspan><tspan x="272.13" y="0">A</tspan><tspan class="cls-7" x="352.71" y="0">R</tspan><tspan class="cls-9" x="434.53" y="0">T</tspan><tspan x="492.64" y="0">A</tspan></text>
+  </g>
+  <g>
+    <polygon class="cls-5" points="408.59 141.33 282.7 141.33 270.93 129.55 240.75 96.8 301.14 96.8 301.14 96.8 270.93 66.63 240.75 96.8 239.46 98.09 196.09 141.43 164.63 109.96 266.81 7.78 275.04 7.78 408.59 141.33"/>
+    <text class="cls-4" transform="translate(288.52 16.54)"><tspan x="0" y="0">©</tspan></text>
+  </g>
+</svg>

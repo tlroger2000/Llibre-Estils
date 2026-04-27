@@ -5,1047 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LA CARTA — Llibre d'Estil Corporatiu</title>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
-
-  :root {
-    --amarillo: #F5E642;
-    --negro: #1A1A1A;
-    --gris-oscuro: #222222;
-    --gris-medio: #2D2D2D;
-    --gris-textura: #282828;
-    --blanco: #FFFFFF;
-    --gris-claro: #AAAAAA;
-    --gris-linea: #3A3A3A;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--negro);
-    color: var(--blanco);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  /* ─── PORTADA ─── */
-  .cover {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background: var(--negro);
-    overflow: hidden;
-    padding: 60px 40px;
-  }
-
-  .cover::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 4px,
-      rgba(255,255,255,0.018) 4px,
-      rgba(255,255,255,0.018) 5px
-    );
-  }
-
-  .cover-accent-left {
-    position: absolute;
-    left: 0; top: 50%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 280px;
-    background: var(--amarillo);
-    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
-  }
-
-  .cover-accent-right {
-    position: absolute;
-    right: 0; top: 50%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 280px;
-    background: var(--amarillo);
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
-  }
-
-  .cover-logo-mark {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 32px;
-  }
-
-  .logo-svg { width: 820px; }
-
-  .cover-brand {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-
-  .cover-brand h1 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 72px;
-    letter-spacing: 16px;
-    color: var(--amarillo);
-    line-height: 1;
-    text-transform: uppercase;
-  }
-
-  .cover-brand .tagline {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    letter-spacing: 6px;
-    color: var(--gris-claro);
-    margin-top: 8px;
-    text-transform: uppercase;
-  }
-
-  .cover-divider {
-    width: 1px;
-    height: 60px;
-    background: var(--gris-linea);
-    margin: 40px auto;
-    position: relative;
-    z-index: 2;
-  }
-
-  .cover-doc-info {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-
-  .cover-doc-info .doc-title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--blanco);
-  }
-
-  .cover-doc-info .doc-sub {
-    font-family: 'Courier New', monospace;
-    font-size: 11px;
-    letter-spacing: 3px;
-    color: var(--gris-claro);
-    margin-top: 6px;
-    text-transform: uppercase;
-  }
-
-  .version-badge {
-    display: inline-block;
-    margin-top: 20px;
-    border: 1px solid var(--amarillo);
-    padding: 4px 16px;
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--amarillo);
-    text-transform: uppercase;
-  }
-
-  /* ─── NAV LATERAL ─── */
-  .nav-sidebar {
-    position: fixed;
-    left: 0; top: 0;
-    width: 4px;
-    height: 100vh;
-    background: var(--gris-linea);
-    z-index: 100;
-  }
-
-  .nav-sidebar::after {
-    content: '';
-    position: absolute;
-    left: 0; top: 0;
-    width: 4px;
-    height: 0%;
-    background: var(--amarillo);
-    transition: height 0.3s;
-  }
-
-  /* ─── SECCIONS ─── */
-  .section {
-    min-height: 100vh;
-    padding: 100px 80px 80px;
-    position: relative;
-    border-top: 1px solid var(--gris-linea);
-  }
-
-  .section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 4px,
-      rgba(255,255,255,0.012) 4px,
-      rgba(255,255,255,0.012) 5px
-    );
-    pointer-events: none;
-  }
-
-  .section-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-    margin-bottom: 72px;
-  }
-
-  .section-number {
-    font-family: 'Courier New', monospace;
-    font-size: 11px;
-    letter-spacing: 4px;
-    color: var(--amarillo);
-    text-transform: uppercase;
-    padding-top: 6px;
-    min-width: 80px;
-  }
-
-  .section-title-block h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 52px;
-    line-height: 1;
-    letter-spacing: -1px;
-    color: var(--blanco);
-    text-transform: uppercase;
-  }
-
-  .section-title-block h2 span {
-    color: var(--amarillo);
-  }
-
-  .section-title-block p {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    color: var(--gris-claro);
-    margin-top: 12px;
-    max-width: 500px;
-    letter-spacing: 1px;
-  }
-
-  /* ─── INTRO / FILOSOFIA ─── */
-  .mvv-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2px;
-    margin-top: 48px;
-  }
-
-  .mvv-card {
-    background: var(--gris-medio);
-    padding: 48px 36px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .mvv-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px; height: 100%;
-    background: var(--amarillo);
-  }
-
-  .mvv-card .mvv-label {
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: var(--amarillo);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
-  .mvv-card h3 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    color: var(--blanco);
-    margin-bottom: 16px;
-    line-height: 1.2;
-  }
-
-  .mvv-card p {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: var(--gris-claro);
-    line-height: 1.7;
-  }
-
-  .values-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-    margin-top: 2px;
-  }
-
-  .value-pill {
-    background: var(--gris-oscuro);
-    padding: 28px 24px;
-    text-align: center;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s;
-  }
-
-  .value-pill:hover { border-bottom-color: var(--amarillo); }
-
-  .value-icon {
-    font-size: 28px;
-    margin-bottom: 12px;
-  }
-
-  .value-pill strong {
-    display: block;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--amarillo);
-    margin-bottom: 8px;
-  }
-
-  .value-pill p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    color: var(--gris-claro);
-    line-height: 1.6;
-  }
-
-  /* ─── LOGOTIP ─── */
-  .logo-showcase {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    margin-bottom: 2px;
-  }
-
-.logo-box {
-    padding: 96px 64px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    position: relative;
-  }
-
-  .logo-box .logo-label {
-    position: absolute;
-    top: 24px; left: 32px;
-    font-family: 'Courier New', monospace;
-    font-size: 14px;
-    letter-spacing: 4px;
-    color: var(--gris-claro);
-    text-transform: uppercase;
-  }
-
-  .lb-dark { background: var(--gris-medio); }
-  .lb-black { background: #0D0D0D; }
-  .lb-white { background: var(--blanco); }
-  .lb-yellow { background: var(--amarillo); }
-
-.logo-box img { max-width: 360px; max-height: 200px; width: auto; height: auto; object-fit: contain; }
-
-  .logo-rules {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-  }
-
-  .rule-card {
-    background: var(--gris-medio);
-    padding: 36px;
-  }
-
-  .rule-card.danger { border-top: 2px solid #E53935; }
-  .rule-card.success { border-top: 2px solid #4CAF50; }
-
-  .rule-card h4 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
-  .rule-card.danger h4 { color: #E53935; }
-  .rule-card.success h4 { color: #4CAF50; }
-
-  .rule-list {
-    list-style: none;
-  }
-
-  .rule-list li {
-    font-family: 'Raleway', sans-serif;
-    font-size: 13px;
-    color: var(--gris-claro);
-    padding: 8px 0;
-    border-bottom: 1px solid var(--gris-linea);
-    padding-left: 16px;
-    position: relative;
-    line-height: 1.5;
-  }
-
-  .rule-list li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--amarillo);
-    font-size: 10px;
-    top: 10px;
-  }
-
-  .exclusion-zone {
-    background: var(--gris-medio);
-    padding: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin-top: 2px;
-  }
-
-  .ez-diagram {
-    position: relative;
-    display: inline-block;
-  }
-
-
-
-  .ez-label {
-    position: absolute;
-    font-family: 'Courier New', monospace;
-    font-size: 9px;
-    letter-spacing: 2px;
-    color: rgba(245,230,66,0.6);
-    text-transform: uppercase;
-  }
-
-  .ez-label.top { top: -16px; left: 50%; transform: translateX(-50%); }
-  .ez-label.bottom { bottom: -16px; left: 50%; transform: translateX(-50%); }
-  .ez-label.left { left: -48px; top: 50%; transform: translateY(-50%) rotate(-90deg); }
-  .ez-label.right { right: -48px; top: 50%; transform: translateY(-50%) rotate(90deg); }
-
-  .ez-text {
-    font-family: 'Raleway', sans-serif;
-    font-size: 13px;
-    color: var(--gris-claro);
-    max-width: 280px;
-    line-height: 1.7;
-  }
-
-  /* ─── COLORS ─── */
-  .colors-primary {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 2px;
-    margin-bottom: 2px;
-  }
-
-  .color-swatch {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .swatch-block {
-    height: 200px;
-    display: flex;
-    align-items: flex-end;
-    padding: 24px;
-  }
-
-  .swatch-block.yellow { background: var(--amarillo); }
-  .swatch-block.black { background: #1A1A1A; border: 1px solid var(--gris-linea); }
-  .swatch-block.white { background: var(--blanco); }
-
-  .swatch-name {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
-  .yellow .swatch-name { color: var(--negro); }
-  .black .swatch-name { color: var(--blanco); }
-  .white .swatch-name { color: var(--negro); }
-
-  .swatch-codes {
-    background: var(--gris-medio);
-    padding: 24px;
-  }
-
-  .code-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--gris-linea);
-  }
-
-  .code-row:last-child { border-bottom: none; }
-
-  .code-label {
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--gris-claro);
-    text-transform: uppercase;
-  }
-
-  .code-value {
-    font-family: 'Courier New', monospace;
-    font-size: 11px;
-    color: var(--amarillo);
-    font-weight: 600;
-  }
-
-  .colors-secondary {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-  }
-
-  .sec-swatch .swatch-block { height: 120px; }
-  .swatch-block.gris-oscuro { background: #222222; border: 1px solid var(--gris-linea); }
-  .swatch-block.gris-mig { background: #2D2D2D; border: 1px solid var(--gris-linea); }
-  .swatch-block.gris-clar { background: #AAAAAA; }
-  .swatch-block.gris-linia { background: #3A3A3A; border: 1px solid var(--gris-linea); }
-
-  .gris-oscuro .swatch-name,
-  .gris-mig .swatch-name,
-  .gris-linia .swatch-name { color: var(--gris-claro); }
-
-  .gris-clar .swatch-name { color: var(--negro); }
-
-  /* ─── TIPOGRAFIA ─── */
-  .typo-block {
-    background: var(--gris-medio);
-    padding: 48px;
-    margin-bottom: 2px;
-    position: relative;
-  }
-
-  .typo-block::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0;
-    width: 4px; height: 100%;
-    background: var(--amarillo);
-  }
-
-  .font-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 36px;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .font-name-block .font-role {
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: var(--amarillo);
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-
-  .font-name-block .font-family {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    color: var(--gris-claro);
-  }
-
-  .font-tag {
-    background: rgba(245,230,66,0.1);
-    border: 1px solid rgba(245,230,66,0.3);
-    padding: 4px 12px;
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--amarillo);
-    text-transform: uppercase;
-  }
-
-  .typo-specimen-helvetica {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
-  .typo-specimen-helvetica .sp-h1 { font-size: 72px; font-weight: 700; line-height: 1; margin-bottom: 8px; }
-  .typo-specimen-helvetica .sp-h2 { font-size: 48px; font-weight: 700; line-height: 1.1; margin-bottom: 8px; }
-  .typo-specimen-helvetica .sp-h3 { font-size: 32px; font-weight: 400; color: var(--gris-claro); margin-bottom: 8px; }
-
-  .typo-specimen-raleway {
-    font-family: 'Raleway', sans-serif;
-  }
-
-  .sp-sub1 { font-size: 28px; font-weight: 600; letter-spacing: 2px; margin-bottom: 8px; }
-  .sp-sub2 { font-size: 20px; font-weight: 400; letter-spacing: 3px; color: var(--gris-claro); margin-bottom: 8px; }
-  .sp-sub3 { font-size: 14px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: rgba(170,170,170,0.7); }
-
-  .typo-specimen-bankgothic {
-    font-family: 'Courier New', monospace;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-  }
-
-  .sp-bg1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
-  .sp-bg2 { font-size: 14px; color: var(--gris-claro); margin-bottom: 8px; }
-  .sp-bg3 { font-size: 12px; color: rgba(170,170,170,0.7); }
-
-  .typo-scale {
-    display: flex;
-    align-items: baseline;
-    gap: 24px;
-    flex-wrap: wrap;
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid var(--gris-linea);
-  }
-
-  .scale-item { text-align: center; }
-  .scale-item .px { font-family: 'Courier New', monospace; font-size: 9px; color: var(--amarillo); display: block; margin-top: 4px; }
-  .scale-item .wt { font-family: 'Courier New', monospace; font-size: 9px; color: var(--gris-claro); display: block; }
-
-  /* ─── ICONOGRAFIA ─── */
-  .icon-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2px;
-    margin-bottom: 24px;
-  }
-
-  .icon-card {
-    background: var(--gris-medio);
-    padding: 28px 16px;
-    text-align: center;
-  }
-
-  .icon-symbol {
-    font-size: 28px;
-    margin-bottom: 12px;
-    display: block;
-  }
-
-  .icon-card span:last-child {
-    font-family: 'Courier New', monospace;
-    font-size: 9px;
-    letter-spacing: 2px;
-    color: var(--gris-claro);
-    text-transform: uppercase;
-    display: block;
-  }
-
-  .image-style-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2px;
-  }
-
-  .img-style-card {
-    background: var(--gris-medio);
-    padding: 36px 28px;
-    position: relative;
-  }
-
-  .img-preview {
-    height: 140px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-    border: 1px solid var(--gris-linea);
-    background: var(--gris-oscuro);
-  }
-
-  .img-style-card h4 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--amarillo);
-    margin-bottom: 10px;
-  }
-
-  .img-style-card p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    color: var(--gris-claro);
-    line-height: 1.7;
-  }
-
-  /* ─── TO DE VEU ─── */
-  .voice-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    margin-bottom: 2px;
-  }
-
-  .voice-card {
-    background: var(--gris-medio);
-    padding: 40px 36px;
-  }
-
-  .voice-card h4 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--amarillo);
-    margin-bottom: 20px;
-  }
-
-  .example-bubble {
-    background: var(--gris-oscuro);
-    border-left: 3px solid var(--amarillo);
-    padding: 16px 20px;
-    margin-bottom: 12px;
-  }
-
-  .example-bubble p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 13px;
-    color: var(--blanco);
-    line-height: 1.6;
-    font-style: italic;
-  }
-
-  .example-bubble.bad {
-    border-left-color: #E53935;
-    opacity: 0.6;
-  }
-
-  .bub-label {
-    font-family: 'Courier New', monospace;
-    font-size: 9px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    display: block;
-  }
-
-  .bub-label.ok { color: #4CAF50; }
-  .bub-label.ko { color: #E53935; }
-
-  .traits-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-  }
-
-  .trait {
-    background: var(--gris-oscuro);
-    padding: 24px 20px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .trait-icon { font-size: 24px; }
-
-  .trait-text strong {
-    display: block;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--amarillo);
-    margin-bottom: 4px;
-  }
-
-  .trait-text p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    color: var(--gris-claro);
-    line-height: 1.5;
-  }
-
-  /* ─── APLICACIONS ─── */
-  .app-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    margin-bottom: 2px;
-  }
-
-  .app-card {
-    background: var(--gris-medio);
-    padding: 40px;
-  }
-
-  .app-card h4 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--amarillo);
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--gris-linea);
-  }
-
-  /* Business Card Preview */
-  .bc-preview {
-    background: var(--gris-oscuro);
-    border-radius: 0;
-    width: 100%;
-    max-width: 340px;
-    aspect-ratio: 1.75;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px 28px;
-    margin: 0 auto;
-  }
-
-  .bc-preview::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      -45deg, transparent, transparent 3px,
-      rgba(255,255,255,0.015) 3px, rgba(255,255,255,0.015) 4px
-    );
-  }
-
-  .bc-left-accent, .bc-right-accent {
-    position: absolute;
-    top: 50%; transform: translateY(-50%);
-    width: 12px; height: 65px;
-    background: var(--amarillo);
-  }
-
-  .bc-left-accent {
-    left: 0;
-    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
-  }
-
-  .bc-right-accent {
-    right: 0;
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
-  }
-
-  .bc-info {
-    position: relative; z-index: 2;
-  }
-
-  .bc-name {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    color: var(--blanco);
-  }
-
-  .bc-name span { font-weight: 300; }
-
-  .bc-role {
-    font-family: 'Courier New', monospace;
-    font-size: 7px;
-    letter-spacing: 2px;
-    color: var(--amarillo);
-    text-transform: uppercase;
-    margin-top: 3px;
-  }
-
-  .bc-divider {
-    width: 1px; height: 50px;
-    background: var(--gris-linea);
-    position: relative; z-index: 2;
-  }
-
-  .bc-contacts {
-    position: relative; z-index: 2;
-  }
-
-  .bc-contact {
-    font-family: 'Courier New', monospace;
-    font-size: 7px;
-    letter-spacing: 1px;
-    color: var(--gris-claro);
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .bc-contact span:first-child { color: var(--amarillo); }
-
-  /* Digital specs */
-  .digital-specs {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .dspec {
-    display: flex;
-    flex-direction: column;
-    background: var(--gris-oscuro);
-    padding: 16px;
-    border-bottom: 1px solid var(--gris-linea);
-  }
-
-  .dspec .ds-label {
-    font-family: 'Courier New', monospace;
-    font-size: 9px;
-    letter-spacing: 3px;
-    color: var(--amarillo);
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .dspec .ds-val {
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    color: var(--gris-claro);
-  }
-
-  .ds-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    background: #000;
-  }
-
-  .app-list {
-    list-style: none;
-  }
-
-  .app-list li {
-    font-family: 'Raleway', sans-serif;
-    font-size: 13px;
-    color: var(--gris-claro);
-    padding: 10px 0;
-    border-bottom: 1px solid var(--gris-linea);
-    padding-left: 20px;
-    position: relative;
-    line-height: 1.5;
-  }
-
-  .app-list li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: var(--amarillo);
-    font-size: 10px;
-  }
-
-  /* ─── FOOTER ─── */
-  .doc-footer {
-    background: #0D0D0D;
-    padding: 60px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 2px solid var(--amarillo);
-  }
-
-  .footer-brand {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 8px;
-    color: var(--amarillo);
-    text-transform: uppercase;
-  }
-
-  .footer-meta {
-    font-family: 'Courier New', monospace;
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--gris-claro);
-    text-align: right;
-    text-transform: uppercase;
-  }
-
-  /* ─── PRINT / DOWNLOAD ─── */
-  .print-btn {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    background: var(--amarillo);
-    color: var(--negro);
-    border: none;
-    padding: 16px 28px;
-    font-family: 'Courier New', monospace;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    cursor: pointer;
-    z-index: 200;
-    font-weight: 700;
-    transition: opacity 0.2s;
-  }
-
-  .print-btn:hover { opacity: 0.85; }
-
-  @media print {
-    .print-btn { display: none; }
-    .nav-sidebar { display: none; }
-    .section { page-break-inside: avoid; }
-  }
-
-  /* ─── UTILITIES ─── */
-  .mt-2 { margin-top: 2px; }
-  .mt-24 { margin-top: 24px; }
-  .mt-48 { margin-top: 48px; }
-
-  .label-xs {
-    font-family: 'Courier New', monospace;
-    font-size: 9px;
-    letter-spacing: 3px;
-    color: var(--amarillo);
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 8px;
-  }
-
-  .body-copy {
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    color: var(--gris-claro);
-    line-height: 1.8;
-    max-width: 680px;
-  }
-
-  hr.rule {
-    border: none;
-    border-top: 1px solid var(--gris-linea);
-    margin: 48px 0;
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -1070,7 +30,7 @@
 </div>
 
 <!-- ════════════════════════════════ ÍNDEX ═════════════════════════════════ -->
-<div class="section" style="min-height:auto; padding: 72px 80px;">
+<div class="section index-section">
   <div class="section-header">
     <div class="section-number">00 /</div>
     <div class="section-title-block">
@@ -1079,20 +39,20 @@
     </div>
   </div>
 
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap: 2px;">
-    <div style="background:var(--gris-medio); padding:36px;">
-      <ul style="list-style:none;">
-        <li style="padding:12px 0; border-bottom:1px solid var(--gris-linea); font-family:'Raleway',sans-serif; font-size:14px; color:var(--gris-claro); display:flex; justify-content:space-between;"><span>01. Introducció i Filosofia de Marca</span><span style="font-family:'Courier New',monospace;color:var(--amarillo);font-size:11px;">Missió · Visió · Valors</span></li>
-        <li style="padding:12px 0; border-bottom:1px solid var(--gris-linea); font-family:'Raleway',sans-serif; font-size:14px; color:var(--gris-claro); display:flex; justify-content:space-between;"><span>02. Logotip</span><span style="font-family:'Courier New',monospace;color:var(--amarillo);font-size:11px;">Normes · Versions · Ús</span></li>
-        <li style="padding:12px 0; border-bottom:1px solid var(--gris-linea); font-family:'Raleway',sans-serif; font-size:14px; color:var(--gris-claro); display:flex; justify-content:space-between;"><span>03. Paleta de Colors</span><span style="font-family:'Courier New',monospace;color:var(--amarillo);font-size:11px;">HEX · RGB · CMYK</span></li>
-        <li style="padding:12px 0; font-family:'Raleway',sans-serif; font-size:14px; color:var(--gris-claro); display:flex; justify-content:space-between;"><span>04. Tipografia</span><span style="font-family:'Courier New',monospace;color:var(--amarillo);font-size:11px;">Jerarquia · Escala</span></li>
+  <div class="index-grid">
+    <div class="index-column">
+      <ul class="index-list">
+        <li><span>01. Introducció i Filosofia de Marca</span><span class="index-meta">Missió · Visió · Valors</span></li>
+        <li><span>02. Logotip</span><span class="index-meta">Normes · Versions · Ús</span></li>
+        <li><span>03. Paleta de Colors</span><span class="index-meta">HEX · RGB · CMYK</span></li>
+        <li><span>04. Tipografia</span><span class="index-meta">Jerarquia · Escala</span></li>
       </ul>
     </div>
-    <div style="background:var(--gris-medio); padding:36px;">
-      <ul style="list-style:none;">
-        <li style="padding:12px 0; border-bottom:1px solid var(--gris-linea); font-family:'Raleway',sans-serif; font-size:14px; color:var(--gris-claro); display:flex; justify-content:space-between;"><span>05. Iconografia i Imatges</span><span style="font-family:'Courier New',monospace;color:var(--amarillo);font-size:11px;">Estètica · Estil</span></li>
-        <li style="padding:12px 0; border-bottom:1px solid var(--gris-linea); font-family:'Raleway',sans-serif; font-size:14px; color:var(--gris-claro); display:flex; justify-content:space-between;"><span>06. To de Veu</span><span style="font-family:'Courier New',monospace;color:var(--amarillo);font-size:11px;">Comunicació · Exemples</span></li>
-        <li style="padding:12px 0; font-family:'Raleway',sans-serif; font-size:14px; color:var(--gris-claro); display:flex; justify-content:space-between;"><span>07. Aplicacions de Marca</span><span style="font-family:'Courier New',monospace;color:var(--amarillo);font-size:11px;">Papereria · Digital</span></li>
+    <div class="index-column">
+      <ul class="index-list">
+        <li><span>05. Iconografia i Imatges</span><span class="index-meta">Estètica · Estil</span></li>
+        <li><span>06. To de Veu</span><span class="index-meta">Comunicació · Exemples</span></li>
+        <li><span>07. Aplicacions de Marca</span><span class="index-meta">Papereria · Digital</span></li>
       </ul>
     </div>
   </div>
@@ -1117,12 +77,12 @@
     <div class="mvv-card">
       <div class="mvv-label">Visió</div>
       <h3>Ser el referent de consultoria gastronòmica a Espanya</h3>
-      <p>Aspirem a ser la consultoria de confiança per a tots els professionals del sector hostaleria que busquen créixer de forma sostenible, intel·ligent i digitalitzada. Volem que cada client que treballi amb La Carta vegi un increment mesurable dels seus resultats.</p>
+      <p>Aspirem a ser la consultoria de confiança per a tots els professionals del sector hostaleria que busquen créixer de forma sostenible, intel·ligent i digitalitzada. Volem que cada client que treballi amb A La Carta vegi un increment mesurable dels seus resultats.</p>
     </div>
     <div class="mvv-card">
       <div class="mvv-label">Promesa de Marca</div>
       <h3>Tecnologia que saps entendre, resultats que pots mesurar</h3>
-      <p>No venen software: oferim èxit. Cada solució que proposem va acompanyada de formació, suport i estratègia per garantir que la tecnologia treballi per al client, no al contrari. La Carta és soci de negoci, no un proveïdor més.</p>
+      <p>No venen software: oferim èxit. Cada solució que proposem va acompanyada de formació, suport i estratègia per garantir que la tecnologia treballi per al client, no al contrari. A La Carta és soci de negoci, no un proveïdor més.</p>
     </div>
   </div>
 
@@ -1165,30 +125,29 @@
     </div>
   </div>
 
-<div class="logo-showcase">
+  <div class="logo-showcase">
     <div class="logo-box lb-dark">
       <div class="logo-label">Versió Principal — Sobre Fons Fosc</div>
-      <img src="images/LogoALaCartaV3.svg" alt="Logo Versió Principal" style="max-width: 460px; height: auto;">
+      <img src="images/LogoALaCartaV3.svg" alt="Logo Versió Principal" class="logo-large">
     </div>
     <div class="logo-box lb-black">
       <div class="logo-label">Versió Negra — Màxim Contrast</div>
-      <img src="images/LogoALaCartaV3.svg" alt="Logo Versió Negra" style="filter: brightness(1.2) contrast(1.1); max-width: 460px; height: auto;">
+      <img src="images/LogoALaCartaV3.svg" alt="Logo Versió Negra" class="logo-large filter-bright">
     </div>
     <div class="logo-box lb-white">
-      <div class="logo-label" style="color:#555;">Versió Monochrome — Sobre Fons Blanc</div>
-      <img src="images/LogoALaCartaV3.svg" alt="Logo Versió Monochrome" style="filter: invert(1) brightness(0.9); max-width: 460px; height: auto;">
+      <div class="logo-label dark">Versió Monochrome — Sobre Fons Blanc</div>
+      <img src="images/LogoALaCartaV4.svg" alt="Logo Versió Monochrome" class="logo-large filter-invert">
     </div>
     <div class="logo-box lb-yellow">
-      <div class="logo-label" style="color:#1A1A1A;">Versió Invertida — Sobre Fons Groc</div>
-      <img src="images/LogoALaCartaV3.svg" alt="Logo Versió Invertida" style="filter: brightness(0) invert(1); max-width: 460px; height: auto;">
+      <div class="logo-label black">Versió Invertida — Sobre Fons Groc</div>
+      <img src="images/LogoALaCartaV3.svg" alt="Logo Versió Invertida" class="logo-large filter-black">
     </div>
   </div>
 
-  <!-- Espai de respecte -->
   <div class="exclusion-zone">
     <div class="ez-diagram">
       <div class="ez-border">
-        <img src="images/LogoALaCarta_Bordes.svg" alt="Logo amb bordes i zona d'exclusió" width="420" style="height: auto;">
+        <img src="images/LogoALaCarta_Bordes.svg" alt="Logo amb bordes i zona d'exclusió" width="420">
       </div>
     </div>
     <div class="ez-text">
@@ -1197,7 +156,6 @@
     </div>
   </div>
 
-  <!-- Normes d'ús -->
   <div class="logo-rules mt-2">
     <div class="rule-card success">
       <h4>✓ Usos Permesos</h4>
@@ -1242,7 +200,7 @@
         <div class="swatch-name">Groc Corporatiu</div>
       </div>
       <div class="swatch-codes">
-        <div class="code-row"><span class="code-label">Nom</span><span class="code-value">La Carta Yellow</span></div>
+        <div class="code-row"><span class="code-label">Nom</span><span class="code-value">A La Carta Yellow</span></div>
         <div class="code-row"><span class="code-label">HEX</span><span class="code-value">#F5E642</span></div>
         <div class="code-row"><span class="code-label">RGB</span><span class="code-value">245 · 230 · 66</span></div>
         <div class="code-row"><span class="code-label">CMYK</span><span class="code-value">0 · 6 · 73 · 4</span></div>
@@ -1255,7 +213,7 @@
         <div class="swatch-name">Negre Corporatiu</div>
       </div>
       <div class="swatch-codes">
-        <div class="code-row"><span class="code-label">Nom</span><span class="code-value">La Carta Black</span></div>
+        <div class="code-row"><span class="code-label">Nom</span><span class="code-value">A La Carta Black</span></div>
         <div class="code-row"><span class="code-label">HEX</span><span class="code-value">#1A1A1A</span></div>
         <div class="code-row"><span class="code-label">RGB</span><span class="code-value">26 · 26 · 26</span></div>
         <div class="code-row"><span class="code-label">CMYK</span><span class="code-value">0 · 0 · 0 · 90</span></div>
@@ -1268,7 +226,7 @@
         <div class="swatch-name">Blanc</div>
       </div>
       <div class="swatch-codes">
-        <div class="code-row"><span class="code-label">Nom</span><span class="code-label" style="color:var(--gris-claro);">Pure White</span></div>
+        <div class="code-row"><span class="code-label">Nom</span><span class="code-label">Pure White</span></div>
         <div class="code-row"><span class="code-label">HEX</span><span class="code-value">#FFFFFF</span></div>
         <div class="code-row"><span class="code-label">RGB</span><span class="code-value">255 · 255 · 255</span></div>
         <div class="code-row"><span class="code-label">CMYK</span><span class="code-value">0 · 0 · 0 · 0</span></div>
@@ -1277,7 +235,7 @@
     </div>
   </div>
 
-  <span class="label-xs mt-48" style="display:block; margin-top:36px;">Colors Secundaris (Suport)</span>
+  <span class="label-xs mt-48">Colors Secundaris (Suport)</span>
   <div class="colors-secondary">
     <div class="color-swatch sec-swatch">
       <div class="swatch-block gris-oscuro"><div class="swatch-name">Gris Fosc</div></div>
@@ -1317,26 +275,26 @@
     </div>
   </div>
 
-  <div style="background:var(--gris-medio); padding:36px; margin-top:2px;">
+  <div class="color-combinations">
     <span class="label-xs">Regles de Combinació Cromàtica</span>
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:16px;">
-      <div style="display:flex; align-items:center; gap:12px; background:var(--gris-oscuro); padding:16px;">
-        <div style="width:32px;height:32px;background:#F5E642;flex-shrink:0;"></div>
-        <div style="width:1px;height:32px;background:var(--gris-linea);"></div>
-        <div style="width:32px;height:32px;background:#1A1A1A;border:1px solid var(--gris-linea);flex-shrink:0;"></div>
-        <span style="font-family:'Raleway',sans-serif;font-size:11px;color:var(--gris-claro);">Combinació Principal — Màxim Contrast</span>
+    <div class="combinations-grid">
+      <div class="combination-item">
+        <div class="color-square yellow"></div>
+        <div class="color-divider"></div>
+        <div class="color-square black"></div>
+        <span class="combination-text">Combinació Principal — Màxim Contrast</span>
       </div>
-      <div style="display:flex; align-items:center; gap:12px; background:var(--gris-oscuro); padding:16px;">
-        <div style="width:32px;height:32px;background:#FFFFFF;flex-shrink:0;"></div>
-        <div style="width:1px;height:32px;background:var(--gris-linea);"></div>
-        <div style="width:32px;height:32px;background:#1A1A1A;border:1px solid var(--gris-linea);flex-shrink:0;"></div>
-        <span style="font-family:'Raleway',sans-serif;font-size:11px;color:var(--gris-claro);">Blanc sobre Negre — Lectura Principal</span>
+      <div class="combination-item">
+        <div class="color-square white"></div>
+        <div class="color-divider"></div>
+        <div class="color-square black"></div>
+        <span class="combination-text">Blanc sobre Negre — Lectura Principal</span>
       </div>
-      <div style="display:flex; align-items:center; gap:12px; background:var(--gris-oscuro); padding:16px;">
-        <div style="width:32px;height:32px;background:#AAAAAA;flex-shrink:0;"></div>
-        <div style="width:1px;height:32px;background:var(--gris-linea);"></div>
-        <div style="width:32px;height:32px;background:#222222;border:1px solid var(--gris-linea);flex-shrink:0;"></div>
-        <span style="font-family:'Raleway',sans-serif;font-size:11px;color:var(--gris-claro);">Gris Clar sobre Gris Fosc — Textos Secundaris</span>
+      <div class="combination-item">
+        <div class="color-square gray"></div>
+        <div class="color-divider"></div>
+        <div class="color-square dark-gray"></div>
+        <span class="combination-text">Gris Clar sobre Gris Fosc — Textos Secundaris</span>
       </div>
     </div>
   </div>
@@ -1362,7 +320,7 @@
       <div class="font-tag">Principals · H1–H3</div>
     </div>
     <div class="typo-specimen-helvetica">
-      <div class="sp-h1">LA CARTA</div>
+      <div class="sp-h1">A LA CARTA</div>
       <div class="sp-h2">Food Consulting</div>
       <div class="sp-h3">Distribuïdors Oficials Hiopos</div>
     </div>
@@ -1393,8 +351,8 @@
         <span class="wt">Label / Badge</span>
       </div>
     </div>
-    <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--gris-linea);">
-      <p style="font-family:'Raleway',sans-serif;font-size:12px;color:var(--gris-claro);">📌 <strong style="color:var(--blanco);">Filosofia:</strong> Helvetica és la veu institucional de La Carta. Neta, sense serif, atemporal. Comunica autoritat i modernitat sense estridències. S'usa exclusivament per a títols i elements de capçalera amb alt impacte visual.</p>
+    <div class="typo-note">
+      <p>📌 <strong>Filosofia:</strong> Helvetica és la veu institucional de La Carta. Neta, sense serif, atemporal. Comunica autoritat i modernitat sense estridències. S'usa exclusivament per a títols i elements de capçalera amb alt impacte visual.</p>
     </div>
   </div>
 
@@ -1412,9 +370,9 @@
       <div class="sp-sub2">Formació · Gestió · Digitalització</div>
       <div class="sp-sub3">Distribuïdors oficials de Hiopos</div>
     </div>
-    <div style="margin-top:24px;">
-      <p style="font-family:'Raleway',sans-serif;font-size:16px;font-weight:400;color:var(--gris-claro);line-height:1.8;">
-        La Carta és la consultoria gastronòmica que necessites per transformar el teu restaurant o bar en un negoci rendible i digitalitzat. Treballem amb tu des del primer dia per implementar les millors solucions tecnològiques del mercat, adaptades a la teva realitat.
+    <div class="mt-24">
+      <p class="body-copy">
+        A La Carta és la consultoria gastronòmica que necessites per transformar el teu restaurant o bar en un negoci rendible i digitalitzat. Treballem amb tu des del primer dia per implementar les millors solucions tecnològiques del mercat, adaptades a la teva realitat.
       </p>
     </div>
     <div class="typo-scale">
@@ -1455,20 +413,20 @@
       <div class="sp-bg2">INFO@ALACARTA.COM</div>
       <div class="sp-bg3">LLEIDA · ESPANYA · REF: LC-2025-001</div>
     </div>
-    <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--gris-linea);">
-      <p style="font-family:'Raleway',sans-serif;font-size:12px;color:var(--gris-claro);">📌 <strong style="color:var(--blanco);">Filosofia:</strong> BankGothic és la font tècnica i industrial de La Carta. Evoca precisió, tecnologia i dades. S'usa exclusivament per a informació de contacte, codis de referència, números de telèfon, adreces d'email i qualsevol dada alfanumèrica tècnica. En entorns digitals on BankGothic no és disponible, usar Courier New com a alternativa monoespaciada.</p>
+    <div class="typo-note">
+      <p>📌 <strong>Filosofia:</strong> BankGothic és la font tècnica i industrial de A La Carta. Evoca precisió, tecnologia i dades. S'usa exclusivament per a informació de contacte, codis de referència, números de telèfon, adreces d'email i qualsevol dada alfanumèrica tècnica. En entorns digitals on BankGothic no és disponible, usar Courier New com a alternativa monoespaciada.</p>
     </div>
   </div>
 
   <!-- Jerarquia visual -->
-  <div style="background:var(--gris-medio);padding:48px;margin-top:2px;">
+  <div class="typo-example">
     <span class="label-xs">Jerarquia Visual — Exemple d'Aplicació</span>
-    <div style="max-width:560px;margin-top:24px;">
-      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:42px;line-height:1;margin-bottom:8px;">Formació Hiopos</div>
-      <div style="font-family:'Raleway',sans-serif;font-weight:600;font-size:18px;letter-spacing:2px;color:var(--amarillo);margin-bottom:16px;">Maximitza el rendiment del teu TPV</div>
-      <div style="font-family:'Raleway',sans-serif;font-size:14px;color:var(--gris-claro);line-height:1.8;margin-bottom:24px;">Sessió de formació intensiva per a propietaris i personal de sala. Aprendràs a extreure el màxim profit del software Hiopos per augmentar la facturació i reduir errors operatius.</div>
-      <div style="height:1px;background:var(--gris-linea);margin-bottom:20px;"></div>
-      <div style="font-family:'Courier New',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gris-claro);">Tel: +34 658 58 78 45 · info@alacarta.com · Lleida</div>
+    <div class="typo-example-content">
+      <h3>Formació Hiopos</h3>
+      <div class="subtitle">Maximitza el rendiment del teu TPV</div>
+      <div class="body-text">Sessió de formació intensiva per a propietaris i personal de sala. Aprendràs a extreure el màxim profit del software Hiopos per augmentar la facturació i reduir errors operatius.</div>
+      <div class="divider"></div>
+      <div class="contact-info">Tel: +34 658 58 78 45 · info@alacarta.com · Lleida</div>
     </div>
   </div>
 </div>
@@ -1499,44 +457,50 @@
     <div class="icon-card"><span class="icon-symbol">🏆</span><span>Èxit</span></div>
   </div>
 
-  <div style="background:var(--gris-medio);padding:28px;margin-bottom:2px;">
+  <div class="icon-rules">
     <span class="label-xs">Normes per a Icones</span>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:16px;">
-      <div style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);">✓ <strong style="color:var(--blanco);">Estil Line Art / Outline:</strong> Icones de traç fi, mai omplerts sòlidament. Coherents amb l'estètica de les targetes de visita.</div>
-      <div style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);">✓ <strong style="color:var(--blanco);">Color:</strong> Groc corporatiu (#F5E642) sobre fons fosc. Blanc sobre fons intermedi.</div>
-      <div style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);">✓ <strong style="color:var(--blanco);">Mides:</strong> 24px per a UI, 32px per a targetes, 48px+ per a destacats principals.</div>
+    <div class="icon-rules-grid">
+      <div class="icon-rule-item">✓ <strong>Estil Line Art / Outline:</strong> Icones de traç fi, mai omplerts sòlidament. Coherents amb l'estètica de les targetes de visita.</div>
+      <div class="icon-rule-item">✓ <strong>Color:</strong> Groc corporatiu (#F5E642) sobre fons fosc. Blanc sobre fons intermedi.</div>
+      <div class="icon-rule-item">✓ <strong>Mides:</strong> 24px per a UI, 32px per a targetes, 48px+ per a destacats principals.</div>
     </div>
   </div>
 
-  <span class="label-xs" style="display:block;margin-top:32px;">Estils Fotogràfics Permesos</span>
+  <span class="label-xs mt-48">Estils Fotogràfics Permesos</span>
   <div class="image-style-grid">
     <div class="img-style-card">
-      <div class="img-preview">🍳</div>
+      <div class="img-preview">
+        <img src="images/delightin-dee-gVvSNWuw6kQ-unsplash.webp" alt="Exemple d'estil fotogràfic gastronòmic" class="img-sample">
+      </div>
       <h4>Gastronòmic / Producte</h4>
       <p>Plats presentats amb llum natural, fons neutres (negre, gris o blanc). Enfocament artístic. Evitar fotografies genèriques de stock. Prioritzar la qualitat visual i l'autenticitat. Temperatura de color càlida però controlada.</p>
     </div>
     <div class="img-style-card">
-      <div class="img-preview">💻</div>
+      <div class="img-preview">
+        <img src="images/hiopos.jpg" alt="Exemple d'estil fotogràfic tecnològic" class="img-sample2">
+      </div>
       <h4>Tecnològic / Software</h4>
       <p>Pantalles de Hiopos, TPVs i hardware en entorns de treball reals. Composicions netes, fons foscos o neutres. Llum artificial dramàtica. Estètica industrial i tecnològica. Ressaltar la interfície del producte.</p>
     </div>
     <div class="img-style-card">
-      <div class="img-preview">🏪</div>
+      <div class="img-preview">
+        <img src="images/comandero.webp" alt="Exemple d'estil fotogràfic de negoci i equip" class="img-sample3">
+      </div>
       <h4>Negoci / Equip</h4>
       <p>Interiors de restaurants moderns, personal professional i propietaris en acció. Fotografia documental i autèntica. Evitar posats artificials. Tonalitats càlides amb alt contrast. Reflectir èxit i professionalitat.</p>
     </div>
   </div>
 
-  <div style="background:var(--gris-medio);padding:28px;margin-top:2px;">
+  <div class="photo-treatment">
     <span class="label-xs">Tractament Fotogràfic</span>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px;">
+    <div class="photo-treatment-grid">
       <div>
-        <p style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);line-height:1.7;">✓ Aplicar un overlay negre semitransparent (30–50% opacitat) sobre fotografies que s'usin com a fons per garantir la llegibilitat del text.</p>
-        <p style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);line-height:1.7;margin-top:8px;">✓ Filtre de contrast elevat i lleugera desaturació per integrar les imatges amb la paleta cromàtica corporativa.</p>
+        <p>✓ Aplicar un overlay negre semitransparent (30–50% opacitat) sobre fotografies que s'usin com a fons per garantir la llegibilitat del text.</p>
+        <p>✓ Filtre de contrast elevat i lleugera desaturació per integrar les imatges amb la paleta cromàtica corporativa.</p>
       </div>
       <div>
-        <p style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);line-height:1.7;">✗ No usar fotografies amb fons de colors saturats que entrin en conflicte amb el groc corporatiu.</p>
-        <p style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);line-height:1.7;margin-top:8px;">✗ Evitar imatges de stock genèriques amb estètica artificial o poc autèntica.</p>
+        <p>✗ No usar fotografies amb fons de colors saturats que entrin en conflicte amb el groc corporatiu.</p>
+        <p>✗ Evitar imatges de stock genèriques amb estètica artificial o poc autèntica.</p>
       </div>
     </div>
   </div>
@@ -1548,7 +512,7 @@
     <div class="section-number">06 /</div>
     <div class="section-title-block">
       <h2>To de <span>Veu</span></h2>
-      <p>Com parla La Carta. Com es comunica. Com es relaciona amb els seus clients.</p>
+      <p>Com parla A La Carta. Com es comunica. Com es relaciona amb els seus clients.</p>
     </div>
   </div>
 
@@ -1588,7 +552,7 @@
       <h4>✓ Exemples de Comunicació Correcta</h4>
       <div class="example-bubble">
         <span class="bub-label ok">Email de prospecció</span>
-        <p>"Hola Jordi, t'escric perquè veig que el teu restaurant podria multiplicar x2 els tiquets de taula amb una gestió intel·ligent de la carta. En 30 minuts et mostro com."</p>
+        <p>"Hola Jordi, t'escric perquè veig que el teu restaurant podria multiplicar x2 els tiquets de taula amb una gestió intel·ligent de A La Carta. En 30 minuts et mostro com."</p>
       </div>
       <div class="example-bubble">
         <span class="bub-label ok">Xarxes socials</span>
@@ -1616,20 +580,20 @@
     </div>
   </div>
 
-  <div style="background:var(--gris-medio);padding:40px;margin-top:2px;">
+  <div class="linguistic-rules">
     <span class="label-xs">Regles Lingüístiques</span>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:20px;">
-      <div>
-        <strong style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--amarillo);display:block;margin-bottom:8px;">Idiomes</strong>
-        <p style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);line-height:1.7;">Català com a idioma principal. Castellà per a mercats fora de Catalunya. Anglès per a contextos internacionals i materials corporatius generals (tagline, logotip).</p>
+    <div class="linguistic-grid">
+      <div class="linguistic-item">
+        <strong>Idiomes</strong>
+        <p>Català com a idioma principal. Castellà per a mercats fora de Catalunya. Anglès per a contextos internacionals i materials corporatius generals (tagline, logotip).</p>
       </div>
-      <div>
-        <strong style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--amarillo);display:block;margin-bottom:8px;">Tractament</strong>
-        <p style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);line-height:1.7;">Sempre "tu" en comunicació directa. Mai "vostè" tret de contextos molt formals. En castellà, "tú". Crear proximitat sense perdre professionalitat.</p>
+      <div class="linguistic-item">
+        <strong>Tractament</strong>
+        <p>Sempre "tu" en comunicació directa. Mai "vostè" tret de contextos molt formals. En castellà, "tú". Crear proximitat sense perdre professionalitat.</p>
       </div>
-      <div>
-        <strong style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--amarillo);display:block;margin-bottom:8px;">Emojis</strong>
-        <p style="font-family:'Raleway',sans-serif;font-size:13px;color:var(--gris-claro);line-height:1.7;">Permesos en RRSS i WhatsApp Business, de forma moderada (màx. 2 per missatge). Prohibits en documents corporatius, propostes i comunicació formal.</p>
+      <div class="linguistic-item">
+        <strong>Emojis</strong>
+        <p>Permesos en RRSS i WhatsApp Business, de forma moderada (màx. 2 per missatge). Prohibits en documents corporatius, propostes i comunicació formal.</p>
       </div>
     </div>
   </div>
@@ -1647,80 +611,65 @@
 
   <!-- Targeta de Visita Preview -->
   <span class="label-xs">Targeta de Visita</span>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px;">
-    <div style="background:var(--gris-medio);padding:40px;">
-      <span class="label-xs" style="margin-bottom:24px;display:block;">Cara Davantera</span>
-      <div class="bc-preview">
-        <div class="bc-left-accent"></div>
-        <div class="bc-right-accent"></div>
-        <div class="bc-info">
-          <div class="bc-name">SANTIAGO <span>Cognom</span></div>
-          <div class="bc-role">CEO</div>
-        </div>
-        <div class="bc-divider"></div>
-        <div class="bc-contacts">
-          <div class="bc-contact"><span>📞</span><span>+34 658 58 78 45</span></div>
-          <div class="bc-contact"><span>✉</span><span>info@alacarta.com</span></div>
-          <div class="bc-contact"><span>📍</span><span>Lleida</span></div>
-        </div>
+  <div class="business-card-section">
+  <div class="business-card-container">
+    <div class="bc-row">
+      <div class="bc-col">
+        <span class="label-xs">Cara Davantera</span>
+        <img src="images/Santi_Tarjetes Visita.png" alt="Exemple Cara Davantera Targeta de Visita" class="bc-img-targeta">
       </div>
-      <div style="margin-top:20px;">
-        <p style="font-family:'Raleway',sans-serif;font-size:12px;color:var(--gris-claro);line-height:1.7;">Mida: 85 × 55 mm · Acabat: Matte Laminate + Spot UV Groc · Paper: 350gr</p>
+      <div class="bc-col">
+        <span class="label-xs">Cara Posterior</span>
+        <img src="images/Santi_Tarjetes Visita2.png" alt="Exemple Cara Posterior Targeta de Visita" class="bc-img-targeta">
       </div>
     </div>
-    <div style="background:var(--gris-medio);padding:40px;">
-      <span class="label-xs" style="margin-bottom:24px;display:block;">Especificacions d'Impressió</span>
+    <div class="bc-specs">
+      <p>Mida: 85 × 55 mm · Acabat: Matte Laminate + Spot UV Groc · Paper: 350gr</p>
+    </div>
+  </div>
+    <div class="business-card-container">
+      <span class="label-xs">Especificacions d'Impressió</span>
       <ul class="app-list">
-        <li><strong style="color:var(--blanco);">Mida:</strong> 85 × 55 mm (estàndard europeu)</li>
-        <li><strong style="color:var(--blanco));">Paper:</strong> 350gr Couché Matte o 400gr Premium</li>
-        <li><strong style="color:var(--blanco);">Acabat:</strong> Laminat Matte + Vernís UV selectiu sobre el groc</li>
-        <li><strong style="color:var(--blanco);">Impressió:</strong> CMYK + tinta especial Pantone 102C</li>
-        <li><strong style="color:var(--blanco);">Sang:</strong> 3mm per costat (total: 91 × 61 mm)</li>
-        <li><strong style="color:var(--blanco);">Zona segura:</strong> 5mm des del tall fins al text</li>
-
+        <li><strong>Mida:</strong> 85 × 55 mm (estàndard europeu)</li>
+        <li><strong>Paper:</strong> 350gr Couché Matte o 400gr Premium</li>
+        <li><strong>Acabat:</strong> Laminat Matte + Vernís UV selectiu sobre el groc</li>
+        <li><strong>Impressió:</strong> CMYK + tinta especial Pantone 102C</li>
+        <li><strong>Sang:</strong> 3mm per costat (total: 91 × 61 mm)</li>
+        <li><strong>Zona segura:</strong> 5mm des del tall fins al text</li>
       </ul>
     </div>
   </div>
 
-
-    <div style="background:var(--gris-medio);padding:40px;">
-
-      <div style="background:var(--blanco);border-radius:4px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.3);max-width:100%;">
-
-      </div>
-      <div style="margin-top:20px;">
-
-      </div>
-    </div>
-    <div style="background:var(--gris-medio);padding:40px;">
-      <span class="label-xs" style="margin-bottom:24px;display:block;">Especificacions de la Factura</span>
-        <iframe src="images/Factura_ALaCarta_Plantilla.pdf" width="100%" height="500px" style="border:none; margin-bottom:24px;">
-             El teu navegador no suporta iframes. <a href="images/Factura_ALaCarta_Plantilla.pdf">Descarrega el PDF aquí.</a>
-        </iframe>
+  <div class="business-card-section">
+       <div class="business-card-container">
+      <span class="label-xs">Especificacions de la Factura</span>
+      <iframe src="images/Factura_ALaCarta_Plantilla.pdf" width="100%" height="1200px" class="invoice-iframe">
+        El teu navegador no suporta iframes. <a href="images/Factura_ALaCarta_Plantilla.pdf">Descarrega el PDF aquí.</a>
+      </iframe>
       <ul class="app-list">
-        <li><strong style="color:var(--blanco);">Capçalera:</strong> Logo La Carta a la part superior dreta, amb franja groga corporativa sota el títol "FACTURA"</li>
-        <li><strong style="color:var(--blanco);">Dades d'emissor:</strong> Nom, adreça, NIF, telèfon i email en tipografia Arial 8-9pt, alineació esquerra</li>
-        <li><strong style="color:var(--blanco);">Dades de factura:</strong> Núm. factura, data, venciment i forma de pagament en caixa destacada a la dreta</li>
-        <li><strong style="color:var(--blanco);">Dades del client:</strong> Secció amb fons groc corporatiu (#F5E642) separant clarament la informació del client</li>
-        <li><strong style="color:var(--blanco);">Taula de conceptes:</strong> Capçalera negra (#1A1A1A) amb text blanc, files alternades blanc/gris per a millor lectura</li>
-        <li><strong style="color:var(--blanco);">Totals:</strong> Subtotal, desglossament d'IVA (10% i 21%) i total final amb fons groc corporatiu destacat</li>
-        <li><strong style="color:var(--blanco);">Peu de pàgina:</strong> Dades de contacte de La Carta + avís de document confidencial</li>
-        <li><strong style="color:var(--blanco);">Paleta cromàtica:</strong> Groc La Carta (#F5E642), Negre (#1A1A1A), Blanc (#FFFFFF), Gris clar (#AAAAAA)</li>
+        <li><strong>Capçalera:</strong> Logo A La Carta a la part superior dreta, amb franja groga corporativa sota el títol "FACTURA"</li>
+        <li><strong>Dades d'emissor:</strong> Nom, adreça, NIF, telèfon i email en tipografia Arial 8-9pt, alineació esquerra</li>
+        <li><strong>Dades de factura:</strong> Núm. factura, data, venciment i forma de pagament en caixa destacada a la dreta</li>
+        <li><strong>Dades del client:</strong> Secció amb fons groc corporatiu (#F5E642) separant clarament la informació del client</li>
+        <li><strong>Taula de conceptes:</strong> Capçalera negra (#1A1A1A) amb text blanc, files alternades blanc/gris per a millor lectura</li>
+        <li><strong>Totals:</strong> Subtotal, desglossament d'IVA (10% i 21%) i total final amb fons groc corporatiu destacat</li>
+        <li><strong>Peu de pàgina:</strong> Dades de contacte de A La Carta + avís de document confidencial</li>
+        <li><strong>Paleta cromàtica:</strong> Groc A La Carta (#F5E642), Negre (#1A1A1A), Blanc (#FFFFFF), Gris clar (#AAAAAA)</li>
       </ul>
     </div>
   </div>
 
   <div class="presencia-digital-section">
-    <h3 style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--amarillo);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--gris-linea);">💻 Presència Digital</h3>
+    <h3>💻 Presència Digital</h3>
     <div class="digital-specs">
       <div class="dspec">
         <span class="ds-label">Favicon</span>
-        <img src="images/estils/Favicon.png" alt="Exemple Favicon" class="ds-img">
+        <img src="images/estils/Favicon.png" alt="Exemple Favicon" class="ds-img-favicon">
         <span class="ds-val">Logosímbol (triangle) sobre fons negre · 32×32px + 64×64px</span>
       </div>
       <div class="dspec">
         <span class="ds-label">Avatar RRSS</span>
-        <img src="images/estils/AvatarRRSS.png" alt="Exemple Avatar" class="ds-img">
+        <img src="images/estils/AvatarRRSS.png" alt="Exemple Avatar" class="ds-img-avatar">
         <span class="ds-val">Logosímbol centrat · fons negre · 1:1 ratio · mínim 400×400px</span>
       </div>
       <div class="dspec">
@@ -1728,11 +677,7 @@
         <img src="images/estils/Portada_Linkedin.png" alt="Exemple LinkedIn" class="ds-img">
         <span class="ds-val">1584×396px · Logo esquerra + tagline centrat sobre fons negre + textura</span>
       </div>
-      <div class="dspec">
-        <span class="ds-label">Portada Facebook</span>
-        <span class="ds-val">820×312px · Logo centrat · accent groc als laterals</span>
-      </div>
-      <div class="dspec">
+        <div class="dspec">
         <span class="ds-label">Story Instagram</span>
         <img src="images/estils/Story_Instagram.png" alt="Exemple Story" class="ds-img">
         <span class="ds-val">1080×1920px · Logo a la part superior · text en zona central</span>
@@ -1749,31 +694,31 @@
     <div class="app-card">
       <h4>📄 Papereria Corporativa</h4>
       <ul class="app-list">
-        <li><strong style="color:var(--blanco);">Capçalera de carta:</strong> Logo centrat a la part superior, franja groga inferior de 4mm, contactes en BankGothic</li>
-        <li><strong style="color:var(--blanco);">Sobre DL i C5:</strong> Finestra esquerra, logo imprès al solapa posterior en groc sobre negre</li>
-        <li><strong style="color:var(--blanco);">Dossier / Carpeta:</strong> Tapa negra amb accent groc a l'esquerra, logo centrat en gran format</li>
-        <li><strong style="color:var(--blanco);">Plantilles Word/Google Docs:</strong> Fons blanc, logo a la capçalera, franja groca de 3px a peu de pàgina</li>
-        <li><strong style="color:var(--blanco);">Signatura d'email:</strong> Logo + nom + càrrec en Helvetica + dades en BankGothic, separador groc</li>
+        <li><strong>Capçalera de carta:</strong> Logo centrat a la part superior, franja groga inferior de 4mm, contactes en BankGothic</li>
+        <li><strong>Sobre DL i C5:</strong> Finestra esquerra, logo imprès al solapa posterior en groc sobre negre</li>
+        <li><strong>Dossier / Carpeta:</strong> Tapa negra amb accent groc a l'esquerra, logo centrat en gran format</li>
+        <li><strong>Plantilles Word/Google Docs:</strong> Fons blanc, logo a la capçalera, franja groca de 3px a peu de pàgina</li>
+        <li><strong>Signatura d'email:</strong> Logo + nom + càrrec en Helvetica + dades en BankGothic, separador groc</li>
       </ul>
     </div>
     <div class="app-card">
       <h4>🖥️ Aplicació en Hiopos</h4>
       <ul class="app-list">
-        <li><strong style="color:var(--blanco);">Pantalla de benvinguda TPV:</strong> Logo A La Carta sobre fons negre en mode repòs del terminal</li>
-        <li><strong style="color:var(--blanco);">Tickets de caixa:</strong> Capçalera amb logo en text, peu de pàgina amb dades de contacte en BankGothic</li>
-        <li><strong style="color:var(--blanco);">Materials de formació:</strong> Plantilles de presentació (Slidedeck) amb tema negre/groc, Helvetica per a títols, Raleway per a contingut</li>
-        <li><strong style="color:var(--blanco);">Manuals i guies:</strong> Portada amb logo gran, estructura de capçaleres amb codi de colors per seccions</li>
-        <li><strong style="color:var(--blanco);">Banners en punt de venda:</strong> Rollers 85×200cm · Logo centrat · Missatge comercial en gran format</li>
+        <li><strong>Pantalla de benvinguda TPV:</strong> Logo A La Carta sobre fons negre en mode repòs del terminal</li>
+        <li><strong>Tickets de caixa:</strong> Capçalera amb logo en text, peu de pàgina amb dades de contacte en BankGothic</li>
+        <li><strong>Materials de formació:</strong> Plantilles de presentació (Slidedeck) amb tema negre/groc, Helvetica per a títols, Raleway per a contingut</li>
+        <li><strong>Manuals i guies:</strong> Portada amb logo gran, estructura de capçaleres amb codi de colors per seccions</li>
+        <li><strong>Banners en punt de venda:</strong> Rollers 85×200cm · Logo centrat · Missatge comercial en gran format</li>
       </ul>
     </div>
     <div class="app-card">
       <h4>📱 Comunicació Digital</h4>
       <ul class="app-list">
-        <li><strong style="color:var(--blanco);">Web corporativa:</strong> Fons negre, tipografia blanca/groga, animations subtils, estructura grid estricta</li>
-        <li><strong style="color:var(--blanco);">Newsletter:</strong> Capçalera negra amb logo, cos en blanc amb accents grocs, peu en negre</li>
-        <li><strong style="color:var(--blanco);">WhatsApp Business:</strong> Foto de perfil logosímbol, to de veu proper però professional</li>
-        <li><strong style="color:var(--blanco);">Presentació comercial (PDF):</strong> Tema fosc, fonts corporatives, gràfics en groc i blanc, dades en BankGothic</li>
-        <li><strong style="color:var(--blanco);">Google My Business:</strong> Fotos d'equip i producte amb tractament cromàtic alineat a la marca</li>
+        <li><strong>Web corporativa:</strong> Fons negre, tipografia blanca/groga, animations subtils, estructura grid estricta</li>
+        <li><strong>Newsletter:</strong> Capçalera negra amb logo, cos en blanc amb accents grocs, peu en negre</li>
+        <li><strong>WhatsApp Business:</strong> Foto de perfil logosímbol, to de veu proper però professional</li>
+        <li><strong>Presentació comercial (PDF):</strong> Tema fosc, fonts corporatives, gràfics en groc i blanc, dades en BankGothic</li>
+        <li><strong>Google My Business:</strong> Fotos d'equip i producte amb tractament cromàtic alineat a la marca</li>
       </ul>
     </div>
   </div>
@@ -1783,13 +728,13 @@
 <div class="doc-footer">
   <div>
     <div class="footer-brand">A LA CARTA</div>
-    <div style="font-family:'Raleway',sans-serif;font-size:12px;color:var(--gris-claro);margin-top:8px;">Food Consulting Service — Manual d'Identitat Visual</div>
+    <div class="footer-subtitle">Food Consulting Service — Manual d'Identitat Visual</div>
   </div>
   <div class="footer-meta">
     <div>Versió 1.0 — 2025</div>
-    <div style="margin-top:4px;">Document Confidencial</div>
-    <div style="margin-top:4px;">info@alacarta.com</div>
-    <div style="margin-top:4px; color:var(--amarillo);">© A La Carta — Tots els drets reservats</div>
+    <div>Document Confidencial</div>
+    <div>info@alacarta.com</div>
+    <div class="copyright">© A La Carta — Tots els drets reservats</div>
   </div>
 </div>
 

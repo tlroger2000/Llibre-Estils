@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 573.21 273.53">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574.21 274.28">
   <defs>
     <style>
       .cls-1 {
@@ -11,51 +11,58 @@
       }
 
       .cls-3 {
+        font-family: Helvetica, Helvetica;
+        font-size: 24px;
+        stroke: #fff;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
         font-family: BankGothicBold, BankGothic;
         font-size: 104.51px;
       }
 
-      .cls-3, .cls-4, .cls-5 {
+      .cls-4, .cls-5, .cls-6 {
         fill: #f3e537;
-      }
-
-      .cls-4 {
-        font-family: MyriadPro-Regular, 'Myriad Pro';
-        font-size: 19.76px;
-      }
-
-      .cls-6 {
-        letter-spacing: 0em;
-      }
-
-      .cls-7 {
-        letter-spacing: -.02em;
-      }
-
-      .cls-8 {
-        letter-spacing: .08em;
+        stroke: #000;
       }
 
       .cls-9 {
-        letter-spacing: -.07em;
+        letter-spacing: .08em;
       }
 
       .cls-10 {
-        letter-spacing: .1em;
+        letter-spacing: -.07em;
       }
 
       .cls-11 {
-        font-family: Helvetica, Helvetica;
-        font-size: 24px;
+        letter-spacing: .1em;
+      }
+
+      .cls-6 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 19.76px;
+        stroke-width: .5px;
       }
     </style>
   </defs>
   <g>
-    <text class="cls-11" transform="translate(83.57 261.99) scale(1.03 1)"><tspan class="cls-1" x="0" y="0">FOOD CONSU</tspan><tspan class="cls-2" x="186.67" y="0">L</tspan><tspan class="cls-1" x="200.65" y="0">TING SE</tspan><tspan class="cls-8" x="313.46" y="0">R</tspan><tspan class="cls-10" x="332.77" y="0">VICE</tspan></text>
-    <text class="cls-3" transform="translate(0 223.67)"><tspan class="cls-7" x="0" y="0">L</tspan><tspan class="cls-6" x="69.39" y="0">A </tspan><tspan class="cls-7" x="190.41" y="0">C</tspan><tspan x="272.13" y="0">A</tspan><tspan class="cls-7" x="352.71" y="0">R</tspan><tspan class="cls-9" x="434.53" y="0">T</tspan><tspan x="492.64" y="0">A</tspan></text>
+    <text class="cls-3" transform="translate(84.07 262.24) scale(1.03 1)"><tspan class="cls-1" x="0" y="0">FOOD CONSU</tspan><tspan class="cls-2" x="186.67" y="0">L</tspan><tspan class="cls-1" x="200.65" y="0">TING SE</tspan><tspan class="cls-9" x="313.46" y="0">R</tspan><tspan class="cls-11" x="332.77" y="0">VICE</tspan></text>
+    <text class="cls-4" transform="translate(.5 223.92)"><tspan class="cls-8" x="0" y="0">L</tspan><tspan class="cls-7" x="69.39" y="0">A </tspan><tspan class="cls-8" x="190.41" y="0">C</tspan><tspan x="272.13" y="0">A</tspan><tspan class="cls-8" x="352.71" y="0">R</tspan><tspan class="cls-10" x="434.53" y="0">T</tspan><tspan x="492.64" y="0">A</tspan></text>
   </g>
   <g>
-    <polygon class="cls-5" points="408.59 141.33 282.7 141.33 270.93 129.55 240.75 96.8 301.14 96.8 301.14 96.8 270.93 66.63 240.75 96.8 239.46 98.09 196.09 141.43 164.63 109.96 266.81 7.78 275.04 7.78 408.59 141.33"/>
-    <text class="cls-4" transform="translate(288.52 16.54)"><tspan x="0" y="0">©</tspan></text>
+    <polygon class="cls-5" points="409.09 141.58 283.2 141.58 271.43 129.8 241.25 97.05 301.64 97.05 301.64 97.05 271.43 66.88 241.25 97.05 239.96 98.34 196.59 141.68 165.13 110.21 267.31 8.03 275.54 8.03 409.09 141.58"/>
+    <text class="cls-6" transform="translate(289.02 16.79)"><tspan x="0" y="0">©</tspan></text>
   </g>
 </svg>

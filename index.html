@@ -901,15 +901,17 @@
 
   /* Digital specs */
   .digital-specs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .dspec {
+    display: flex;
+    flex-direction: column;
     background: var(--gris-oscuro);
     padding: 16px;
+    border-bottom: 1px solid var(--gris-linea);
   }
 
   .dspec .ds-label {
@@ -919,13 +921,22 @@
     color: var(--amarillo);
     text-transform: uppercase;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
   }
 
   .dspec .ds-val {
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
     color: var(--gris-claro);
+  }
+
+  .ds-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: #000;
   }
 
   .app-list {
@@ -1699,6 +1710,41 @@
     </div>
   </div>
 
+  <div class="presencia-digital-section">
+    <h3 style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--amarillo);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--gris-linea);">💻 Presència Digital</h3>
+    <div class="digital-specs">
+      <div class="dspec">
+        <span class="ds-label">Favicon</span>
+        <img src="images/estils/Favicon.png" alt="Exemple Favicon" class="ds-img">
+        <span class="ds-val">Logosímbol (triangle) sobre fons negre · 32×32px + 64×64px</span>
+      </div>
+      <div class="dspec">
+        <span class="ds-label">Avatar RRSS</span>
+        <img src="images/estils/AvatarRRSS.png" alt="Exemple Avatar" class="ds-img">
+        <span class="ds-val">Logosímbol centrat · fons negre · 1:1 ratio · mínim 400×400px</span>
+      </div>
+      <div class="dspec">
+        <span class="ds-label">Portada LinkedIn</span>
+        <img src="images/estils/Portada_Linkedin.png" alt="Exemple LinkedIn" class="ds-img">
+        <span class="ds-val">1584×396px · Logo esquerra + tagline centrat sobre fons negre + textura</span>
+      </div>
+      <div class="dspec">
+        <span class="ds-label">Portada Facebook</span>
+        <span class="ds-val">820×312px · Logo centrat · accent groc als laterals</span>
+      </div>
+      <div class="dspec">
+        <span class="ds-label">Story Instagram</span>
+        <img src="images/estils/Story_Instagram.png" alt="Exemple Story" class="ds-img">
+        <span class="ds-val">1080×1920px · Logo a la part superior · text en zona central</span>
+      </div>
+      <div class="dspec">
+        <span class="ds-label">Post Instagram</span>
+        <img src="images/estils/Post_Instagram.png" alt="Exemple Post" class="ds-img">
+        <span class="ds-val">1080×1080px · Logo + textura fons + text Helvetica/Raleway</span>
+      </div>
+    </div>
+  </div>
+
   <div class="app-grid">
     <div class="app-card">
       <h4>📄 Papereria Corporativa</h4>
@@ -1711,20 +1757,9 @@
       </ul>
     </div>
     <div class="app-card">
-      <h4>💻 Presència Digital</h4>
-      <div class="digital-specs">
-        <div class="dspec"><span class="ds-label">Favicon</span><span class="ds-val">Logosímbol (triangle) sobre fons negre · 32×32px + 64×64px</span></div>
-        <div class="dspec"><span class="ds-label">Avatar RRSS</span><span class="ds-val">Logosímbol centrat · fons negre · 1:1 ratio · mínim 400×400px</span></div>
-        <div class="dspec"><span class="ds-label">Portada LinkedIn</span><span class="ds-val">1584×396px · Logo esquerra + tagline centrat sobre fons negre + textura</span></div>
-        <div class="dspec"><span class="ds-label">Portada Facebook</span><span class="ds-val">820×312px · Logo centrat · accent groc als laterals</span></div>
-        <div class="dspec"><span class="ds-label">Story Instagram</span><span class="ds-val">1080×1920px · Logo a la part superior · text en zona central</span></div>
-        <div class="dspec"><span class="ds-label">Post Instagram</span><span class="ds-val">1080×1080px · Logo + textura fons + text Helvetica/Raleway</span></div>
-      </div>
-    </div>
-    <div class="app-card">
       <h4>🖥️ Aplicació en Hiopos</h4>
       <ul class="app-list">
-        <li><strong style="color:var(--blanco);">Pantalla de benvinguda TPV:</strong> Logo La Carta sobre fons negre en mode repòs del terminal</li>
+        <li><strong style="color:var(--blanco);">Pantalla de benvinguda TPV:</strong> Logo A La Carta sobre fons negre en mode repòs del terminal</li>
         <li><strong style="color:var(--blanco);">Tickets de caixa:</strong> Capçalera amb logo en text, peu de pàgina amb dades de contacte en BankGothic</li>
         <li><strong style="color:var(--blanco);">Materials de formació:</strong> Plantilles de presentació (Slidedeck) amb tema negre/groc, Helvetica per a títols, Raleway per a contingut</li>
         <li><strong style="color:var(--blanco);">Manuals i guies:</strong> Portada amb logo gran, estructura de capçaleres amb codi de colors per seccions</li>
